@@ -11,6 +11,6 @@ namespace MinimalApi.BookBasicExample.Service
         Task<bool> UpdateAsync(Book book ,CancellationToken cancellationToken = default);
         Task<bool> DeleteAsync(int id, CancellationToken cancellationToken = default);
         Task<Book> GetByBookIdAsync(int id, CancellationToken cancellationToken = default);
-
+        
     }
 }

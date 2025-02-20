@@ -21,7 +21,7 @@ namespace MinimalApi.BookBasicExample.Service
             return await context.SaveChangesAsync(cancellationToken) > 0;
         }
 
-        public async Task<IEnumerable<Book?>> GetAllBooksAsync( CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<Book>> GetAllBooksAsync( CancellationToken cancellationToken = default)
         {
           return  await context.Books.ToListAsync(cancellationToken);
         }
@@ -30,6 +30,8 @@ namespace MinimalApi.BookBasicExample.Service
         {
             return await context.Books.FindAsync(id ,cancellationToken);
         }
+
+      
 
         public async Task<IEnumerable<Book>> SearchBooksNameAsync(string title, CancellationToken cancellationToken = default)
         {
